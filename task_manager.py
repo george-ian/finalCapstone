@@ -333,7 +333,7 @@ def generate_task_stats():
         
 def generate_user_stats():
     """
-    The function `generate_user_stats` generates statistics about the tasks 
+    The function generate_user_stats generates statistics about the tasks 
     assigned to each user and writes this information to user_overview.txt
     """
 
