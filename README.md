@@ -1,9 +1,9 @@
 # finalCapstone
 
 The function 'reg_user' registers a new user by asking for a  
-unique username and password. If the passwords provided match,  
-it storesthe new username and password to the dictionary  
-and 'user.txt'.  
+unique username and password. If the passwords provided  
+match, it stores the new username and password to  
+the dictionary and 'user.txt'.  
 The function 'update_tasks' writes task information to the file  
 tasks.txt in a specific format.  
 The function 'add_task' asks the user to input details of a  
