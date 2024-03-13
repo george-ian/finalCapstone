@@ -492,48 +492,81 @@ while not logged_in:
 
 
 while True:
-    # presenting the menu to the user and 
-    # making sure that the user input is converted to lower case.
-    print()
-    menu = input('''Select one of the following options below:
-r - Registering a user
-a - Adding a task
-va - View all tasks
-vm - View my task
-gr - Generate reports
-ds - Display statistics
-e - Exit
-: ''').lower()
-
-    if menu == 'r':
-        reg_user()
-        
-    elif menu == 'a':
-        add_task()
-        
-
-    elif menu == 'vm':
-        view_mine()
-        
-    elif menu == 'gr':
-        generate_task_stats()
-        generate_user_stats()
-        str_to_dsp="To view the reports please open the following files: "
-        str_to_dsp+="\n'task_overview.txt'\n'user_overview.txt'.\nYou can find "
-        str_to_dsp+="them in the local directory."
-        print(str_to_dsp)
-        
+    if curr_user=="admin":
+        # presenting the menu to the admin and 
+        # making sure that the user input is converted to lower case.
+        print()
+        menu = input('''Select one of the following options below:
+    r - Registering a user
+    a - Adding a task
+    va - View all tasks
+    vm - View my task
+    gr - Generate reports
+    ds - Display statistics
+    e - Exit
+    : ''').lower()
     
-    elif menu == 'ds' and curr_user == 'admin': 
-        if curr_user == 'admin':
-            display_stats()
-        else:
-            print("You do not have permission to view this information.")  
-
-    elif menu == 'e':
-        print('Goodbye!!!')
-        exit()
-
-    else:
-        print("You have made a wrong choice, please try again")
+        if menu == 'r':
+            reg_user()
+            
+        elif menu == 'a':
+            add_task()
+        elif menu == 'va':
+            view_all()
+         
+        elif menu == 'vm':
+            view_mine()
+            
+        elif menu == 'gr':
+            generate_task_stats()
+            generate_user_stats()
+            str_to_dsp="To view the reports please open the following files: "
+            str_to_dsp+="\n'task_overview.txt'\n'user_overview.txt'.\nYou can find "
+            str_to_dsp+="them in the local directory."
+            print(str_to_dsp)
+            
         
+        elif menu == 'ds': 
+            display_stats()  
+    
+        elif menu == 'e':
+            print('Goodbye!!!')
+            exit()
+    
+        else:
+            print("You have made a wrong choice, please try again")
+    else:
+        # presenting the menu to all other users and 
+        # making sure that the user input is converted to lower case.
+        print()
+        menu = input('''Select one of the following options below:
+    r - Registering a user
+    a - Adding a task
+    va - View all tasks
+    vm - View my task
+    gr - Generate reports
+    ds - Display statistics
+    e - Exit
+    : ''').lower()
+    
+        if menu == 'r':
+            reg_user()
+            
+        elif menu == 'a':
+            add_task()
+            
+        elif menu == 'va':
+            view_all()
+            
+    
+        elif menu == 'vm':
+            view_mine()
+           
+        elif menu == 'e':
+            print('Goodbye!!!')
+            exit()
+    
+        else:
+            print("You have made a wrong choice, please try again")
+        
+            
