@@ -544,8 +544,6 @@ while True:
     a - Adding a task
     va - View all tasks
     vm - View my task
-    gr - Generate reports
-    ds - Display statistics
     e - Exit
     : ''').lower()
     
